@@ -1,0 +1,23 @@
+﻿- Blob Storage: Images, Files
+- Redis Cache: Common Data Cache
+- Service Bus: Save User SignUp Details Message
+- Azure SQL: Database
+- Key Vault: Connection Strings
+- Azure Function: Sending Email
+- Application Insight: Application Level Monitoring
+- Monitor: Subscription Level Monitoring
+- Azure AD: App Registration For Key Vault Access
+- WebApp: Deployment
+- Virtual Machine: Deployment
+
+- CosmosDB: Cart
+
+------------ Keyvault setup in Production -----------
+- Set the following environment variables values in WebApp and VM (System Environment Variables) with the Allowed/Registered App for policy at Keyvault service 
+	- AZURE_CLIENT_ID
+	- AZURE_TENANT_ID 
+	- AZURE_CLIENT_SECRET
+
+- Restart the VM after setting the above variables
+
+Link: https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/identity/Azure.Identity/TROUBLESHOOTING.md#troubleshoot-environmentcredential-authentication-issues

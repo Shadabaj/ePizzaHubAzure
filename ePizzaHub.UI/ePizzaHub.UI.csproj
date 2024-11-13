@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Content Remove="bundleconfig.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <_ContentIncludedByDefault Remove="bundleconfig.json" />
+	  <_ContentIncludedByDefault Remove="wwwroot\css\bundle.css" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.10" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+
+		<PackageReference Include="X.PagedList.Mvc.Core" Version="8.0.7" />
+		<PackageReference Include="WebMarkupMin.AspNetCore6" Version="2.11.0" />
+
+		<PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+		<PackageReference Include="Serilog.Enrichers.Environment" Version="2.2.0" />
+		<PackageReference Include="Serilog.Enrichers.Process" Version="2.0.2" />
+		<PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+		<PackageReference Include="Serilog.Settings.Configuration" Version="3.4.0" />
+		
+		<PackageReference Include="Azure.Messaging.ServiceBus" Version="7.11.0" />
+		<PackageReference Include="Azure.Storage.Blobs" Version="12.14.0" />
+		<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.21.0" />
+		
+		<PackageReference Include="Serilog.Sinks.MSSqlServer" Version="5.8.0" />
+		<PackageReference Include="StackExchange.Redis" Version="2.6.80" />
+		<PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="6.0.10" />
+		
+		<PackageReference Include="Azure.Identity" Version="1.13.1" />
+		<PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.4.0" />
+		<PackageReference Include="Microsoft.Extensions.Azure" Version="1.2.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\ePizzaHub.Services\ePizzaHub.Services.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Include="Areas\Admin\Views\Item\Create.cshtml" />
+	  <None Include="Areas\Admin\Views\Item\Index.cshtml" />
+	  <None Include="bundleconfig.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Properties\PublishProfiles\" />
+	</ItemGroup>
+</Project>
