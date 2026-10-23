@@ -371,6 +371,6 @@ FodyWeavers.xsd
 !.env.example
 
 # Operating-system metadata
- desktop.ini
+desktop.ini
 Thumbs.db
 .DS_Store
